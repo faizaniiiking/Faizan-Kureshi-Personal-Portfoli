@@ -43,7 +43,7 @@ const Home = () => {
         
         {/* Right Section - Image */}
         <div className="lg:w-1/2 w-full flex justify-center items-center p-8">
-          <img src="/developer-photo.jpg" alt="Faizan" className="rounded-full shadow-lg w-64 h-64 object-cover" />
+          <img src="/Images/f2.jpg" alt="Faizan" className="rounded-full shadow-lg w-64 h-64 object-cover" />
         </div>
       </div>
     </div>

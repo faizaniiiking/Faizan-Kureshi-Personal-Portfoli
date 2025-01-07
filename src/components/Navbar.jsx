@@ -1,11 +1,11 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';  // Import NavLink from react-router-dom
-import Footer from './Footer';
+
 
 const Navbar = () => {
   return (
     <nav className="w-full flex items-center justify-between bg-black text-white p-4">
-      <div className="img">myImg</div>
+      <div className="img"><h1 className='font-bold text-2xl '>Faizan .K</h1></div>
       
       {/* Navigation List */}
       <ul className="flex items-center gap-6">
