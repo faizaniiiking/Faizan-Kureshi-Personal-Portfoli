@@ -1,4 +1,4 @@
-import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa'; // Importing social media icons
+import { FaGithub, FaLinkedin, FaInstagram } from 'react-icons/fa'; // Importing social media icons
 import { IoMdDownload } from 'react-icons/io'; // Importing download icon
 
 const Home = () => {
@@ -20,7 +20,7 @@ const Home = () => {
               <a href="mailto:faizan@example.com">Hire Me</a>
             </button>
             <button className="bg-gray-600 hover:bg-gray-800 text-white py-2 px-6 rounded-lg shadow-lg transition duration-300">
-              <a href="/Faizan_CV.pdf" download>
+              <a href="https://drive.google.com/file/d/1NCRumplexyGJxBnEAn4FrtVzbbiLvi51/view?usp=sharing" download>
                 <IoMdDownload className="inline-block mr-2" />
                 Download CV
               </a>
@@ -29,14 +29,14 @@ const Home = () => {
           
           {/* Social Media Icons */}
           <div className="mt-8 flex gap-6">
-            <a href="https://github.com/FaizanKureshi" target="_blank" rel="noopener noreferrer">
+            <a href="https://github.com/faizaniiiking   " target="_blank" rel="noopener noreferrer">
               <FaGithub className="text-3xl hover:text-red-500 transition duration-300" />
             </a>
-            <a href="https://www.linkedin.com/in/faizan-kureshi/" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.linkedin.com/in/faizan-khan-b68964245/" target="_blank" rel="noopener noreferrer">
               <FaLinkedin className="text-3xl hover:text-blue-600 transition duration-300" />
             </a>
-            <a href="https://twitter.com/FaizanKureshi" target="_blank" rel="noopener noreferrer">
-              <FaTwitter className="text-3xl hover:text-blue-400 transition duration-300" />
+            <a href="https://www.instagram.com/fffaizankhan/" target="_blank" rel="noopener noreferrer">
+              <FaInstagram className="text-3xl hover:text-pink-500 transition duration-300" />
             </a>
           </div>
         </div>

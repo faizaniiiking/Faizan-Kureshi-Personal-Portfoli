@@ -1,5 +1,4 @@
 import React from 'react';
-import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa'; // Importing social media icons
 
 const About = () => {
   return (
@@ -40,19 +39,11 @@ const About = () => {
         {/* Contact Section */}
         <section className="mt-8">
           <h2 className="text-3xl font-semibold text-yellow-400">Connect with Me</h2>
-          <div className="mt-6 flex gap-6">
-            <a href="https://github.com/FaizanKureshi" target="_blank" rel="noopener noreferrer">
-              <FaGithub className="text-3xl hover:text-red-500 transition duration-300" />
-            </a>
-            <a href="https://www.linkedin.com/in/faizan-kureshi/" target="_blank" rel="noopener noreferrer">
-              <FaLinkedin className="text-3xl hover:text-blue-600 transition duration-300" />
-            </a>
-            <a href="https://twitter.com/FaizanKureshi" target="_blank" rel="noopener noreferrer">
-              <FaTwitter className="text-3xl hover:text-blue-400 transition duration-300" />
-            </a>
+          <div className="mt-6 text-gray-400 text-lg">
+            <p><span className="font-semibold text-yellow-400">Phone:</span> +91-123-456-7890</p>
+            <p className="mt-2"><span className="font-semibold text-yellow-400">Email:</span> faizan@example.com</p>
           </div>
         </section>
-
       </div>
     </div>
   );
