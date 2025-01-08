@@ -55,7 +55,7 @@ const About = () => {
             <div className="text-center bg-gray-800 p-4 rounded-lg shadow-md hover:shadow-xl transition-all">
               <FaUser className="text-yellow-400 text-4xl mx-auto mb-2" />
               <p className="text-lg text-gray-300">
-                <span className="font-semibold text-yellow-400">Age:</span> 25
+                <span className="font-semibold text-yellow-400">Age:</span> 23
               </p>
             </div>
             <div className="text-center bg-gray-800 p-4 rounded-lg shadow-md hover:shadow-xl transition-all">
