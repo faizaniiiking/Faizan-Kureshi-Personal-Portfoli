@@ -52,9 +52,30 @@ const Navbar = () => {
             Projects
           </NavLink>
         </li>
+
+        <li className="py-2 px-4 lg:py-0 lg:px-0">
+          <NavLink
+            to="/services"
+            className={({ isActive }) => (isActive ? 'text-red-500' : 'text-white')}
+            onClick={() => setIsOpen(false)}
+          >
+            Services
+          </NavLink>
+        </li>
+
+        <li className="py-2 px-4 lg:py-0 lg:px-0">
+          <NavLink
+            to="/contactme"
+            className={({ isActive }) => (isActive ? 'text-red-500' : 'text-white')}
+            onClick={() => setIsOpen(false)}
+          >
+            Contact Me
+          </NavLink>
+        </li>
       </ul>
     </nav>
   );
 };
 
 export default Navbar;
+  
