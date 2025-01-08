@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa"; // Importing social media icons
 import { IoMdDownload } from "react-icons/io"; // Importing download icon
+import { Link } from 'react-router-dom'; // Importing Link for navigation
 
 const Home = () => {
   // Animation variants for Framer Motion
@@ -46,12 +47,13 @@ const Home = () => {
             className="mt-6 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
             variants={itemVariants}
           >
-            <a
-              href="mailto:faizan@example.com"
+            {/* Updated Hire Me button */}
+            <Link
+              to="/contactme"
               className="bg-red-500 hover:bg-red-700 text-white py-2 px-6 rounded-lg shadow-lg transition duration-300"
             >
               Hire Me
-            </a>
+            </Link>
             <a
               href="https://drive.google.com/file/d/1NCRumplexyGJxBnEAn4FrtVzbbiLvi51/view?usp=sharing"
               download

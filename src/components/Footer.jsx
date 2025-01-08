@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { FaLinkedin, FaGithub, FaTwitter, FaInstagram } from 'react-icons/fa';
+import { FaLinkedin, FaGithub, FaTwitter, FaInstagram } from 'react-icons/fa'; // Import social media icons
 
 const Footer = () => {
   return (
@@ -41,18 +41,18 @@ const Footer = () => {
         </div>
 
         {/* Social Media Icons */}
-        <div className="flex gap-6">
-          <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
-            <FaLinkedin className="text-2xl hover:text-blue-700" />
+        <div className="flex gap-6 mt-4 sm:mt-0">
+          <a href="https://github.com/faizaniiiking" target="_blank" rel="noopener noreferrer">
+            <FaGithub className="text-2xl hover:text-gray-500 transition duration-300" />
           </a>
-          <a href="https://github.com" target="_blank" rel="noopener noreferrer">
-            <FaGithub className="text-2xl hover:text-gray-500" />
+          <a href="https://www.linkedin.com/in/faizan-khan-b68964245/" target="_blank" rel="noopener noreferrer">
+            <FaLinkedin className="text-2xl hover:text-blue-700 transition duration-300" />
           </a>
           <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-            <FaTwitter className="text-2xl hover:text-blue-400" />
+            <FaTwitter className="text-2xl hover:text-blue-400 transition duration-300" />
           </a>
-          <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
-            <FaInstagram className="text-2xl hover:text-pink-600" />
+          <a href="https://www.instagram.com/fffaizankhan/" target="_blank" rel="noopener noreferrer">
+            <FaInstagram className="text-2xl hover:text-pink-600 transition duration-300" />
           </a>
         </div>
       </div>

@@ -1,8 +1,48 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa"; // Import icons
+import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
+import emailjs from "emailjs-com"; // Import EmailJS
 
 const ContactMe = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+  const [status, setStatus] = useState("");
+
+  // Handle form input changes
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+  };
+
+  // Handle form submission
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "your_service_id", // Replace with your EmailJS Service ID
+        "your_template_id", // Replace with your EmailJS Template ID
+        e.target, // The form element
+        "your_user_id" // Replace with your EmailJS User ID
+      )
+      .then(
+        (result) => {
+          setStatus("Message sent successfully!");
+          setFormData({ name: "", email: "", message: "" }); // Reset form after successful submission
+        },
+        (error) => {
+          setStatus(`Error sending message. Please try again. ${error.text}`);
+          console.error("EmailJS Error:", error.text);
+        }
+      );
+  };
+
   return (
     <div className="bg-black text-white py-16">
       <div className="w-11/12 max-w-4xl mx-auto">
@@ -35,10 +75,10 @@ const ContactMe = () => {
               <FaEnvelope className="text-yellow-400 mr-3 text-xl shadow-lg hover:shadow-2xl transition-all duration-300" />
               <span className="font-semibold text-yellow-400">Email:</span>{" "}
               <a
-                href="mailto:faizan@example.com"
+                href="mailto:faizanikkhan@gmail.com"
                 className="hover:text-red-500"
               >
-                faizan@example.com
+                faizanikkhan@gmail.com
               </a>
             </p>
             <p className="text-lg flex items-center">
@@ -52,6 +92,7 @@ const ContactMe = () => {
         {/* Contact Form */}
         <motion.form
           className="bg-gray-800 p-6 rounded-lg shadow-lg"
+          onSubmit={handleSubmit} // Form submission handler
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.4 }}
@@ -63,6 +104,9 @@ const ContactMe = () => {
             <input
               type="text"
               id="name"
+              name="name" // Add name attribute for form data
+              value={formData.name}
+              onChange={handleChange}
               className="w-full p-3 rounded-lg bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-yellow-400"
               placeholder="Enter your name"
             />
@@ -75,6 +119,9 @@ const ContactMe = () => {
             <input
               type="email"
               id="email"
+              name="email" // Add name attribute for form data
+              value={formData.email}
+              onChange={handleChange}
               className="w-full p-3 rounded-lg bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-yellow-400"
               placeholder="Enter your email"
             />
@@ -86,6 +133,9 @@ const ContactMe = () => {
             </label>
             <textarea
               id="message"
+              name="message" // Add name attribute for form data
+              value={formData.message}
+              onChange={handleChange}
               rows="5"
               className="w-full p-3 rounded-lg bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-yellow-400"
               placeholder="Enter your message"
@@ -98,6 +148,13 @@ const ContactMe = () => {
           >
             Send Message
           </button>
+
+          {/* Status Message */}
+          {status && (
+            <div className="mt-4 text-center text-yellow-400">
+              <p>{status}</p>
+            </div>
+          )}
         </motion.form>
       </div>
     </div>
